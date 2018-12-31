@@ -8,7 +8,6 @@ chmod 777 /opt/utorrent-server-alpha-v3_3/
 ln -s /opt/utorrent-server-alpha-v3_3/utserver /usr/bin/utserver
 utserver -settingspath /opt/utorrent-server-alpha-v3_3/ &
 echo "http://xx.xx.xx.xx:8080/gui/web/index.html"
-echo "ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://"
-
+ifconfig | awk '/inet addr/{print substr($2,6)}'
 
 # don't forget to make it executable chmod a+x xyz.sh
