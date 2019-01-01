@@ -1,6 +1,8 @@
 #!/bin/bash
-sudo apt-get update
-apt upgrade
+sudo apt-get update && sudo apt-get upgrade
+
+sudo chmod +x plex.sh
+
 apt-get install libssl1.0.0 libssl-dev
 wget http://download-new.utorrent.com/endpoint/utserver/os/linux-x64-ubuntu-13-04/track/beta/ -O utorrent.tar.gz
 tar -zxvf utorrent.tar.gz -C /opt/
