@@ -9,7 +9,9 @@ sudo apt-get install deluge-console
 echo "*****************************************"
 echo "After Deluge has finished installing, you need to run the Deluge daemon"
 
-deluged sudo pkill deluged
+ 
+sudo pkill deluged
+sudo deluged
 
 echo "*****************************************"
 echo "making backup of the original configuration file and then open it for editing"
@@ -17,12 +19,13 @@ echo "Once inside the nano text editor, you’ll need to add a line to the botto
 echo "of the configuration file with the following convention:"
 echo "user:password:level"
 echo "Where user is the username you want for Deluge, password is the password you want,"
-echo "and thelevel is 10 (the full-access/administrative level for the daemon)."
+echo "and thelevel is 10 (the full-access administrative level for the daemon)."
 echo "So for our purposes, we used pi:raspberry:10"
 echo "When you’re done editing, hit Ctrl+X on your keyboard and save your changes when prompted"
 
-cp ~/.config/deluge/auth ~/.config/deluge/auth.old nano ~/.config/deluge/auth
-deluged deluge-console
+cp ~/.config/deluge/auth ~/.config/deluge/auth.old 
+sudo nano ~/.config/deluge/auth
+sudo deluged deluge-console
 
 echo "Once inside the console, you’ll need to make a quick configuration change. Enter the following"
 echo "config -s allow_remote True config allow_remote exit"
