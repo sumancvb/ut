@@ -17,3 +17,7 @@ hostname -I
 #To re-enable the service to start up at boot
 sudo systemctl enable apache2
 sudo systemctl restart apache2
+
+# Install Deluge
+sudo apt-get install deluged deluge-console python-mako deluge-web
+
