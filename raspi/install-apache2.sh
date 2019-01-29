@@ -2,7 +2,9 @@
 echo "****************************************************"
 echo "Installing Apache2"
 echo "****************************************************"
-sudo apt-get update && sudo apt-get install apache2 -y
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get install apache2 -y
 
 #Step 2: Adjust the Firewall
 #sudo ufw app list
