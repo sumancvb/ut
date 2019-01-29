@@ -4,6 +4,7 @@ deluge default port 8112 e.g. http://192.168.1.13:8112
 deluge default password: deluge
 
 ## for autostartup Deluge
+
     sudo nano /etc/rc.local
 
 add following
@@ -20,7 +21,7 @@ add following
 2. Issue the command:
 
     sudo nano /etc/sysctl.conf
-
+    
 3. Add the following at the bottom of the file:
 
     net.ipv6.conf.all.disable_ipv6 = 1
