@@ -6,7 +6,7 @@ deluge default password: deluge
 ## for autostartup Deluge
 
     sudo nano /etc/rc.local
-
+    
 add following
 
     # Start Deluge on boot:
